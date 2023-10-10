@@ -17,8 +17,7 @@ class Payments extends CI_Controller
        			// $transtref='subscribeyt0Ts613fc04447567';
 				$result = array();
 				//The parameter after verify/ is the transaction reference to be verified
-				// sk_live_43de72f6491329f537776f6cd5f7cde666ac780b
-				// sk_test_9b3c42093329a1ad0a4903726db808fab7309972
+		
 				// subscribe9dBKe613f50169950f
 				$url = 'https://api.paystack.co/transaction/verify/'.$transtref;
 				$hh=header('Content-type: application/json');
@@ -26,7 +25,7 @@ class Payments extends CI_Controller
 				curl_setopt($ch, CURLOPT_URL, $url);
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 				curl_setopt($ch, CURLOPT_HTTPHEADER, 
-							['Authorization: Bearer sk_test_9b3c42093329a1ad0a4903726db808fab7309972']
+							['Authorization: Bearer f']
 							);
 		        curl_setopt($ch, CURLOPT_HEADER, $hh);
 		        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
@@ -94,7 +93,7 @@ class Payments extends CI_Controller
 		$data= array('');
 	$transaction_id = $_POST['transaction_reference'];
 	// echo $transaction_id;
-	$merchant_transaction_key =  'qxnxM8RKHQLR2krASVmp';
+	$merchant_transaction_key =  '';
 	$url = 'https://www.zilliongift.com/verify/'.$transaction_id.'/'.$merchant_transaction_key ;
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
