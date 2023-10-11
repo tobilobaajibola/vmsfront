@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | Please see the user guide for complete details:
 |
-|	https://codeigniter.com/user_guide/general/routing.html
+|	https://codeigniter.com/userguide3/general/routing.html
 |
 | -------------------------------------------------------------------------
 | RESERVED ROUTES
@@ -49,56 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-
-
-
-
-$route['products']='products/product_categories';
-$route['products/category/(:any)']='products/list_products/$1';
-$route['products/cart']='carts/addtocart';
-$route['products/details/(:any)']='products/product_details/$1';
-// $route['products/cart']='carts/view_cart';
-
-$route['articles']='blogs/list_posts';
-$route['articles/(:any)']='blogs/post_details/$1';
-
-$route['beneficiary/update/(:any)'] = 'beneficiaries/edit_beneficiaries/$1';
-
-$route['cart']='carts/view_cart';
-$route['checkout']='orders/checkout';
-$route['faq']='faqs/get_faqs';
-$route['dashboard'] = 'accounts/dashboards';
-$route['setting'] = 'accounts/account_settings';
-$route['subscription_detail/(:any)'] = 'subscriptions/subscription_details/$1';
-$route['subscriptions'] = 'subscriptions/subscription_lists';
-$route['orders'] = 'orders/order_lists';
-$route['order/result']='orders/order_results';
-$route['order/(:any)'] = 'orders/order_details/$1';
-$route['accountpage'] = 'accounts/account_page';
-$route['account/emailvalidate/(:any)'] = 'accounts/email_validations/$1';
-$route['logout'] = 'accounts/logout';
-
-
-// app
-$route['app'] = 'app/pages/index';
-// to call another page use components
-$route['component/(:any)']='pages/component/$1';
-
-//to call section use boxes
-$route['boxes/visitortag/(:any)']='boxes/visitortags/$1';
-
-$route['qrscan']='boxes/qrcode_scan';
-$route['qrvalidate/(:any)'] = 'accounts/qrcode_login/$1';
-
-// $route['app/login'] = 'app/accounts/login';
-$route['logout'] = 'accounts/logout';
-$route['admit_checkin/(:any)'] = 'visitors/admit_visitors/$1';
-
-
-
-$route['pricing']='pages/pricing';
-$route['box/(:any)']='boxes/$1';
-$route['(:any)']='pages/view/$1';
-$route['default_controller'] = 'pages/index';
-$route['404_override'] = 'pages/page_not_found';
-// $route['translate_uri_dashes'] = FALSE;
+$route['qrscan'] = 'qrgenerate/qrscan';
+$route['convertqr'] = 'qrgenerate/qrdata';
+$route['qrgenerate'] = 'qrgenerate/qrconvert';
+$route['default_controller'] = 'welcome';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
