@@ -46,5 +46,5 @@ or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
 ***************
 Acknowledgement
 ***************
- http://phpqrcode.sourceforge.net/.
+phpqrcode
  /** ZXing **/ HTML5 QR scanner
