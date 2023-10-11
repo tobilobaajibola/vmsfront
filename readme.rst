@@ -1,5 +1,5 @@
 ###################
-QR GENERATE
+QRCODE GENERATOR AND SCANNER
 ###################
 
 THis is an on ongoing open QR  generator and Scanner  project  developed by Tobiloba Ajibola
